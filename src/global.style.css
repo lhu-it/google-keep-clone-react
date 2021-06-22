@@ -1,0 +1,195 @@
+/* file này dùng để style chung, tương tự như bootstrap :> */
+
+/* background-color */
+
+.bg-dark {
+    background-color: #333;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-light {
+    background-color: #f5f5f5;
+}
+
+.bg-primary {
+    background-color: #e74e3a;
+}
+
+.bg-warning {
+    background-color: #f7b801;
+}
+
+/* text-color */
+
+.text-dark {
+    color: #333 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-light {
+    color: #f5f5f5 !important;
+}
+
+.text-primary {
+    color: #e74e3a !important;
+}
+
+.text-warning {
+    color: #f7b801 !important;
+}
+
+/* float */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* align-text */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* margin */
+
+.m-1 {
+    margin: 0.5rem;
+}
+
+.m-2 {
+    margin: 1rem;
+}
+
+.m-3 {
+    margin: 1.5rem;
+}
+
+.m-4 {
+    margin: 2rem;
+}/* padding */
+
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 1.5rem;
+}
+
+.p-4 {
+    padding: 2rem;
+}
+
+/* width */
+
+.w-1 {
+    width: calc(100% / 12);
+}
+
+.w-2 {
+    width: calc(100% / 6);
+}
+
+.w-3 {
+    width: 25%
+}
+
+.w-4 {
+    width: calc(100% / 3);
+}
+
+.w-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.w-6 {
+    width: 50%
+}
+
+.w-7 {
+    width: calc(100% / 12 * 7);
+}
+
+.w-8 {
+    width: calc(100% / 3 * 2);
+}
+
+.w-9 {
+    width: calc(100% / 3 * 4);
+}
+
+.w-10 {
+    width: calc(100% / 6 * 5);
+}
+
+.w-11 {
+    width: calc(100% / 12 * 11);
+}
+
+.w-12 {
+    width: 100%;
+}
+
+/* display */
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+/* border */
+
+.border-none {
+    border: none !important;
+}
+
+/* shadow */
+
+.shadow-s {
+    box-shadow: 0 0 0.25rem 0.25rem rgb(0, 0, 0, 0.2);
+}
+
+.shadow-m {
+    box-shadow: 0 0 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
+}
+
+.shadow-l {
+    box-shadow: 0 0 0.75rem 0.75rem rgb(0, 0, 0, 0.2);
+}
