@@ -5,6 +5,20 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
+import './App.css';
+//import cac nut icon
+import { BsSearch } from 'react-icons/bs';
+import { BsList } from 'react-icons/bs';
+import { BsGrid3X3Gap } from 'react-icons/bs';
+import { BsGear } from 'react-icons/bs';
+import { BsArrowClockwise } from 'react-icons/bs';
+import { BsViewStacked } from 'react-icons/bs';
+import { BsPeopleCircle } from 'react-icons/bs';
+import { BsFillTrashFill } from 'react-icons/bs';
+import { BsFillBellFill } from 'react-icons/bs';
+import { BsPencil } from 'react-icons/bs';
+import { BiNotepad } from 'react-icons/bi';
+import { BiSave } from 'react-icons/bi';
 
 import { Home, Reminder, Archive, Trash, Labels, Label } from "./routes";
 import LabelBox from "./components/labelBox"
@@ -42,27 +56,57 @@ export default function App() {
     ])
     setListLabels(newListLabels)
   }
+  //nút menu
+  document.addEventListener("DOMContentLoaded",function(){
+    var nut = document.querySelector('div.icon i');
+    var mobile = document.querySelector('ul');
+    nut.addEventListener('click',function(){
+        mobile.classList.toggle('active');
+    })
+  })
 
   return (
     <div>
       <Router>
-        <div>
+        {/* thanh nav */}
+        <div className="sidebar"> 
+        <div className="icon"><i><BsList/></i></div>
+        <img className="logo" src={"https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"} width="45px" height="45px" ></img>
+          <div ><h3>Keep</h3>
+            <form>
+              <input  type='text' name='Seach' placeholder='         Tìm kiếm...'></input>
+              <button type="submit"><i><BsSearch/></i></button> 
+              <button><i className="rightbar"><BsPeopleCircle/></i></button>
+              <button><i className="rightbar"><BsGrid3X3Gap/></i></button>
+              <button><i className="rightbar"><BsGear/></i></button>
+              <button><i className="rightbar"><BsViewStacked/></i></button>
+              <button><i className="rightbar"><BsArrowClockwise/></i></button>    
+            </form>
+        </div>
+        </div>
+        {/* phan menu danh muc */}
+        <div className="menu">
           <ul>
             <li>
-              <NavLink to="/home">Ghi chú</NavLink>
+            <button><BiNotepad/></button>
+              <NavLink className="a " to="/home">Ghi chú</NavLink>
             </li>
             <li>
-              <NavLink to="/reminder">Lời nhắc</NavLink>
+            <button><BsFillBellFill/></button>
+              <NavLink className="a " to="/reminder">Lời nhắc</NavLink>
             </li>
             <li>
-              <button onClick={() => setIsOpenLabelBox(true)}>Chỉnh sửa nhãn</button>
+              <button><BsPencil/></button>
+              <button type="sua" className="a " onClick={() => setIsOpenLabelBox(true)}>Chỉnh sửa nhãn</button>
             </li>
             <Labels listLabels={listLabels} />
             <li>
-              <NavLink to="/archive">Lưu trữ</NavLink>
+              <button><BiSave/></button>
+              <NavLink className="a " to="/archive">Lưu trữ</NavLink>
             </li>
             <li>
-              <NavLink to="/trash">Thùng rác</NavLink>
+              <button><BsFillTrashFill/></button>
+              <NavLink className="a " to="/trash">Thùng rác</NavLink>
             </li>
           </ul>
 
