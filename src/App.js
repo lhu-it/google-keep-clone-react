@@ -7,23 +7,27 @@ import {
 } from "react-router-dom";
 import './App.css';
 //import cac nut icon
-import { BsSearch } from 'react-icons/bs';
-import { BsList } from 'react-icons/bs';
-import { BsGrid3X3Gap } from 'react-icons/bs';
-import { BsGear } from 'react-icons/bs';
-import { BsArrowClockwise } from 'react-icons/bs';
-import { BsViewStacked } from 'react-icons/bs';
-import { BsPeopleCircle } from 'react-icons/bs';
-import { BsFillTrashFill } from 'react-icons/bs';
-import { BsFillBellFill } from 'react-icons/bs';
-import { BsPencil } from 'react-icons/bs';
-import { BiNotepad } from 'react-icons/bi';
-import { BiSave } from 'react-icons/bi';
+import { 
+  BsSearch,
+  BsPencil,BsList,
+  BsGrid3X3Gap,
+  BsGear,
+  BsArrowClockwise,
+  BsViewStacked,
+  BsPeopleCircle,
+  BsFillTrashFill,
+  BsFillBellFill  
+} from 'react-icons/bs';
+import { 
+  BiNotepad,
+  BiSave 
+} from 'react-icons/bi';
 
 import { Home, Reminder, Archive, Trash, Labels, Label } from "./routes";
 import LabelBox from "./components/labelBox"
 
 import removeVNTones from './store/removeVNTones'
+
 
 export default function App() {
   const [isOpenLabelBox, setIsOpenLabelBox] = useState(false)
@@ -57,13 +61,7 @@ export default function App() {
     setListLabels(newListLabels)
   }
   //nút menu
-  document.addEventListener("DOMContentLoaded",function(){
-    var nut = document.querySelector('div.icon i');
-    var mobile = document.querySelector('ul');
-    nut.addEventListener('click',function(){
-        mobile.classList.toggle('active');
-    })
-  })
+  
 
   return (
     <div>
